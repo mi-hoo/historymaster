@@ -1,0 +1,38 @@
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 15px;
+}
+
+.jumbotron {
+  background-image: url(/images/top_image.jpg?b9101ea0d25f8eaf790fe4fa37aa7095);
+  background-size: cover;
+  background-position: center 60%;
+  border-radius: 0;
+}
+
+.jumbotron p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.float-left {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #ECF4D9;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.feature i {
+  color: green;
+  margin-bottom: 15px;
+}
+
