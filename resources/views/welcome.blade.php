@@ -13,7 +13,7 @@
         <h1>中学歴史Web学習サイト</h1>
         <p>サブテキストサブテキストサブテキストサブテキストサブテキストサブテキスト</br>
         サブテキストサブテキストサブテキストサブテキストサブテキストサブテキスト</p>
-        <a class="btn btn-success btn-lg" href="#" role="button">学習を始める（ユーザー登録） »</a>
+        <a class="btn btn-success btn-lg" href="/register" role="button">学習を始める（ユーザー登録） »</a>
        </div>
       </div>
      </div>
