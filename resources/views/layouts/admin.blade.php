@@ -31,8 +31,22 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">お問い合わせ</a>
                 </li>
-            </ul>    
-                    <button class="btn btn-outline-light navbar-btn">ログイン</button>
+            </ul>
+            <div class="my-navbar-control">
+     @if(Auth::check())
+       <a class="my-navbar-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
+        {{ __('messages.Logout') }}
+       </a>
+       
+       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+         @csrf
+       </form>
+     @else
+       <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
+     @endif
+   </div>
         </div>
       </nav>
         {{-- ナビゲーションバー ここまで--}}

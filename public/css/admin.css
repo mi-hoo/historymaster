@@ -7,6 +7,10 @@
   margin-right: 15px;
 }
 
+.my-navbar-item {
+  color: white;
+}
+
 .jumbotron {
   background-image: url(/images/top_image.jpg?b9101ea0d25f8eaf790fe4fa37aa7095);
   background-size: cover;
