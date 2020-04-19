@@ -1,3 +1,7 @@
+@charset "UTF-8";
+
+/* ナビゲーションバー*/
+
 .navbar-brand {
   font-size: 25px;
   font-weight: bold;
@@ -11,9 +15,7 @@
   color: white;
 }
 
-.body {
-  padding-top: 70px;
-}
+/* welcomeページ*/
 
 .jumbotron {
   background-image: url(/images/top_image.jpg?b9101ea0d25f8eaf790fe4fa37aa7095);
@@ -42,5 +44,21 @@
 .feature i {
   color: green;
   margin-bottom: 15px;
+}
+
+/* welcomeページ以外共通*/
+
+.body {
+  padding-top: 6.5rem;
+}
+
+/* MYページ home.blade.php*/
+
+.card1 {
+  background-color: #FADCE9;
+}
+
+.card2 {
+  background-color: #FBDAC8;
 }
 

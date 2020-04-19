@@ -8,7 +8,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<body>
+<body class="body">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
