@@ -1,4 +1,7 @@
 /* ナビゲーションバー*/
+.navbar {
+ box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
 
 .navbar-brand {
   font-size: 25px;
@@ -49,13 +52,12 @@
  }
  
  /* MYページ home.blade.php*/
- .card1 {
-  background-color: #FADCE9;
-  
+ .box {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  padding: 15px;
+  margin-bottom: 20px;
  }
  
- .card2 {
-  background-color: #FBDAC8;
-  
+ .box h3 {
+  background-color: #ECF4D9;
  }
- 
