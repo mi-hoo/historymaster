@@ -16,6 +16,11 @@
   color: white;
  }
  
+ /* ナビバーとコンテンツが重ならないようにする設定。welcomeページ以外共通*/
+ .body {
+  padding-top: 6.5rem;
+ }
+ 
  /* welcomeページ*/
  .jumbotron {
   background-image: url("../images/top_image.jpg");
@@ -46,12 +51,7 @@
   margin-bottom:15px;
  }
  
- /* welcomeページ以外共通*/
- .body {
-  padding-top: 6.5rem;
- }
- 
- /* MYページ home.blade.php*/
+ /* 問題一覧ページ index.blade.php*/
  .box {
   background-color: #ECF4D9;
   box-shadow: 0 3px 6px rgba(0,0,0,0.4);
