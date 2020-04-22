@@ -56,6 +56,10 @@
   margin-bottom: 15px;
 }
 
+.howto {
+  text-align: center;
+}
+
 /* 問題一覧ページ index.blade.php*/
 
 .box {
