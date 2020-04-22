@@ -19,7 +19,7 @@
     <body>
         {{-- ここからナビゲーションバー --}}
       <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
-        <a class="navbar-brand" href="#"><i class="fas fa-landmark fa-lg"></i> HistoryMaster</a>
+        <a class="navbar-brand" href="/"><i class="fas fa-landmark fa-lg"></i> HistoryMaster</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

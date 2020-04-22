@@ -29,8 +29,8 @@ class HomeController extends Controller
        
        if(Auth::check())
         return redirect('admin/index');
-        else
-       return view('welcome');
+       else
+        return view('welcome');
        
    }
    

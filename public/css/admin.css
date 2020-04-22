@@ -58,6 +58,7 @@
 
 .howto {
   text-align: center;
+  margin-top: 15px;
 }
 
 /* 問題一覧ページ index.blade.php*/
@@ -70,7 +71,7 @@
 }
 
 .box h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .box h4 {
