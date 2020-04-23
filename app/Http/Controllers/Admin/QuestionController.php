@@ -21,9 +21,20 @@ class QuestionController extends Controller
     
     public function title()
     {
-        $unit = new Unit;
-        $title1 = $unit->category_id(1);
-        return view('index',['quetsion_title1'=>$title1]);
+        $unit1 = Unit::where('category_id',1)->get();
+        return view('index',['unit1' => $unit1]);
+        
+        $unit2 = Unit::where('category_id',2)->get();
+        return view('index',['unit2' => $unit2]);
+        
+        $unit3 = Unit::where('category_id',3)->get();
+        return view('index',['unit3' => $unit3]);
+        
+        $unit4 = Unit::where('category_id',4)->get();
+        return view('index',['unit4' => $unit4]);
+        
+        $unit5 = Unit::where('category_id',5)->get();
+        return view('index',['unit5' => $unit5]);
     }
     
 }

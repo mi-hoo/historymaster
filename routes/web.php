@@ -21,6 +21,7 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/index', 'Admin\QuestionController@index')->middleware('auth');
     Route::get('/index/question', 'Admin\QuestionController@question')->middleware('auth');
+    Route::get('/index','Admin\QuestionController@title')->middleware('auth');
 
 });
 

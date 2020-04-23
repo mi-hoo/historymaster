@@ -15,31 +15,25 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-crow"></i> 古 代</h4>
-     <p><a href="#">人類の誕生と古代文明</a></p>
-     <p><a href="#">日本の成り立ちと倭の文明</a></p>
-     <p><a href="#">大帝国の出現と律令国家の形成</a></p>
-     <p><a href="#">貴族社会の発展</a></p>
-     @foreach($quetsion_title1 as $titles)
-     <p><a href="#">{{ $titles->title }}</a></p>
+     @foreach($unit1 as $question_unit1)
+     <p><a href="#">{{ $question_unit1->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-horse-head"></i> 中 世</h4>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
+     @foreach($unit2 as $question_unit2)
+     <p><a href="#">{{ $question_unit2->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-vihara"></i> 近 世</h4>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
+     @foreach($unit3 as $question_unit3)
+     <p><a href="#">{{ $question_unit3->title }}</a></p>
+     @endforeach
     </div>
  </div>
  </div>
@@ -47,19 +41,17 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-industry"></i> 近 代</h4>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
+     @foreach($unit4 as $question_unit4)
+     <p><a href="#">{{ $question_unit4->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-space-shuttle"></i> 現 代</h4>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
-     <p><a href="#">問題タイトル</a></p>
+     @foreach($unit5 as $question_unit5)
+     <p><a href="#">{{ $question_unit5->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
