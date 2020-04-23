@@ -19,6 +19,8 @@
      <p><a href="#">日本の成り立ちと倭の文明</a></p>
      <p><a href="#">大帝国の出現と律令国家の形成</a></p>
      <p><a href="#">貴族社会の発展</a></p>
+     @foreach($quetsion_title1 as $titles)
+     <p><a href="#">{{ $titles->title }}</a></p>
     </div>
  </div>
  <div class="col-md-4">
