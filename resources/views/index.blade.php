@@ -15,25 +15,28 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-crow"></i> 古 代</h4>
-     @foreach($unit1 as $question_unit1)
-     <p><a href="#">{{ $question_unit1->title }}</a></p>
-     @endforeach
+     <p><a href="#">{{ $unit[0]->title }}</a></p>
+     <p><a href="#">{{ $unit[1]->title }}</a></p>
+     <p><a href="#">{{ $unit[2]->title }}</a></p>
+     <p><a href="#">{{ $unit[3]->title }}</a></p>
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-horse-head"></i> 中 世</h4>
-     @foreach($unit2 as $question_unit2)
-     <p><a href="#">{{ $question_unit2->title }}</a></p>
-     @endforeach
+     <p><a href="#">{{ $unit[4]->title }}</a></p>
+     <p><a href="#">{{ $unit[5]->title }}</a></p>
+     <p><a href="#">{{ $unit[6]->title }}</a></p>
+     <p><a href="#">{{ $unit[7]->title }}</a></p>
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-vihara"></i> 近 世</h4>
-     @foreach($unit3 as $question_unit3)
-     <p><a href="#">{{ $question_unit3->title }}</a></p>
-     @endforeach
+     <p><a href="#">{{ $unit[8]->title }}</a></p>
+     <p><a href="#">{{ $unit[9]->title }}</a></p>
+     <p><a href="#">{{ $unit[10]->title }}</a></p>
+     <p><a href="#">{{ $unit[11]->title }}</a></p>
     </div>
  </div>
  </div>
@@ -41,17 +44,18 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-industry"></i> 近 代</h4>
-     @foreach($unit4 as $question_unit4)
-     <p><a href="#">{{ $question_unit4->title }}</a></p>
-     @endforeach
+     <p><a href="#">{{ $unit[12]->title }}</a></p>
+     <p><a href="#">{{ $unit[13]->title }}</a></p>
+     <p><a href="#">{{ $unit[14]->title }}</a></p>
+     <p><a href="#">{{ $unit[15]->title }}</a></p>
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-space-shuttle"></i> 現 代</h4>
-     @foreach($unit5 as $question_unit5)
-     <p><a href="#">{{ $question_unit5->title }}</a></p>
-     @endforeach
+     <p><a href="#">{{ $unit[16]->title }}</a></p>
+     <p><a href="#">{{ $unit[17]->title }}</a></p>
+     <p><a href="#">{{ $unit[18]->title }}</a></p>
     </div>
  </div>
  <div class="col-md-4">
