@@ -26,9 +26,6 @@ class QuestionController extends Controller
         return view('index',compact('unit'));
     }
     
-    public function open()
-    {
-        return view('question');
-    }
+    
     
 }

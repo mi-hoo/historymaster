@@ -15,28 +15,25 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-crow"></i> 古 代</h4>
-     <p><a href="#">{{ $unit[0]->title }}</a></p>
-     <p><a href="#">{{ $unit[1]->title }}</a></p>
-     <p><a href="#">{{ $unit[2]->title }}</a></p>
-     <p><a href="#">{{ $unit[3]->title }}</a></p>
+    @foreach($unit->whereIn('category_id', [1]) as $value1)
+    <p><a href="#">{{ $value1->title }}</a></p>
+    @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-horse-head"></i> 中 世</h4>
-     <p><a href="#">{{ $unit[4]->title }}</a></p>
-     <p><a href="#">{{ $unit[5]->title }}</a></p>
-     <p><a href="#">{{ $unit[6]->title }}</a></p>
-     <p><a href="#">{{ $unit[7]->title }}</a></p>
+     @foreach($unit->whereIn('category_id', [2]) as $value2)
+     <p><a href="#">{{ $value2->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-vihara"></i> 近 世</h4>
-     <p><a href="#">{{ $unit[8]->title }}</a></p>
-     <p><a href="#">{{ $unit[9]->title }}</a></p>
-     <p><a href="#">{{ $unit[10]->title }}</a></p>
-     <p><a href="#">{{ $unit[11]->title }}</a></p>
+     @foreach($unit->whereIn('category_id', [3]) as $value3)
+     <p><a href="#">{{ $value3->title }}</a></p>
+     @endforeach
     </div>
  </div>
  </div>
@@ -44,18 +41,17 @@
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-industry"></i> 近 代</h4>
-     <p><a href="#">{{ $unit[12]->title }}</a></p>
-     <p><a href="#">{{ $unit[13]->title }}</a></p>
-     <p><a href="#">{{ $unit[14]->title }}</a></p>
-     <p><a href="#">{{ $unit[15]->title }}</a></p>
+     @foreach($unit->whereIn('category_id', [4]) as $value4)
+     <p><a href="#">{{ $value4->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
     <div class="box">
     <h4><i class="fas fa-space-shuttle"></i> 現 代</h4>
-     <p><a href="#">{{ $unit[16]->title }}</a></p>
-     <p><a href="#">{{ $unit[17]->title }}</a></p>
-     <p><a href="#">{{ $unit[18]->title }}</a></p>
+     @foreach($unit->whereIn('category_id', [5]) as $value5)
+     <p><a href="#">{{ $value5->title }}</a></p>
+     @endforeach
     </div>
  </div>
  <div class="col-md-4">
