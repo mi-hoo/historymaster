@@ -22,10 +22,16 @@ class QuestionController extends Controller
     public function title()
     {
         $unit = Unit::all();
+        $categories = Category::all();
 
-        return view('index',compact('unit'));
+        return view('index',['unit' => $unit,'categories' => $categories]);
+        
     }
     
+    public function open($unit_id)
+    {
+        $unit = Unit::find($unit_id);
     
-    
+        return view('question',['unit' => $unit_3]);
+    }
 }

@@ -8,6 +8,6 @@ class Category extends Model
 {
     public function units()
     {
-        return $this->belongsTo(Unit::class);
+        return $this->hasMany(Unit::class);
     }
 }

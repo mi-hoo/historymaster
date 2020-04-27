@@ -10,4 +10,9 @@ class Unit extends Model
     {
         return $this->hasMany(Category::class);
     }
+    
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
 }
