@@ -9,16 +9,26 @@
 @section('content')
 <body class="body">
 <div class="container">
-
-    <p>{{ $unit->title }}</p>
- 
+    <div class="unit_title col-md-12">
+    <h4>{{ $unit->title }}</h4>
+    </div>
     <div class="question col-md-12">
         @foreach($questions as $question)
         <div class="text">
-        {{ $question->text }}
-            
+        <p>問{{ $question->id }}　{{ $question->text }}</p>
+            <div class="form-check">
+            @foreach($question->choices as $choice)
+                <div class="choice">
+                <input class="form-check-input" type="radio" name="choice" id="{{ $question->id }}">
+                <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
+                </div>
+            @endforeach
+            </div>
         </div>
         @endforeach
+    </div>
+    <div class="btn col-md-12">
+    <a class="btn btn-success btn-lg" href="#" role="button">　採点する　</a>
     </div>
 </div>
  

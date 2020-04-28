@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Category;
 use App\Unit;
 use App\Question;
+use App\Choice;
 
 class QuestionController extends Controller
 {
@@ -33,7 +34,8 @@ class QuestionController extends Controller
     {
         $unit = Unit::find($request->id);
         $questions = Question::all();
+        $choices = Choice::all();
     
-        return view('question',['unit' => $unit,'questions' => $questions]);
+        return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices]);
     }
 }
