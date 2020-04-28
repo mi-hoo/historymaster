@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
 use App\Unit;
+use App\Question;
 
 class QuestionController extends Controller
 {
@@ -28,10 +29,11 @@ class QuestionController extends Controller
         
     }
     
-    public function open($unit_id)
+    public function open(Request $request)
     {
-        $unit = Unit::find($unit_id);
+        $unit = Unit::find($request->id);
+        $questions = Question::all();
     
-        return view('question',['unit' => $unit_3]);
+        return view('question',['unit' => $unit,'questions' => $questions]);
     }
 }

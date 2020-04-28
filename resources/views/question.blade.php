@@ -9,10 +9,19 @@
 @section('content')
 <body class="body">
 <div class="container">
+
+    <p>{{ $unit->title }}</p>
  
- <div class="row">
+    <div class="question col-md-12">
+        @foreach($questions as $question)
+        <div class="text">
+        {{ $question->text }}
+            
+        </div>
+        @endforeach
+    </div>
+</div>
  
- </div>
 
 </div>
 </body>

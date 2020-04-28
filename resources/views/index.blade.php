@@ -18,7 +18,7 @@
     <div class="box">
     <h4><i class="fas fa-crow"></i> {{ $category->name }}</h4>
     @foreach($category->units as $unit)
-    <p><a href='#'>{{ $unit->title }}</a></p>
+    <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a></p>
     @endforeach
     </div>
     @endforeach
