@@ -19,7 +19,7 @@
             <div class="form-check">
             @foreach($question->choices as $choice)
                 <div class="choice">
-                <input class="form-check-input" type="radio" name="choice" id="{{ $question->id }}">
+                <input class="form-check-input" type="radio" name="choice" value="{{ $choice->id }}" id="{{ $question->id }}">
                 <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
                 </div>
             @endforeach
@@ -28,7 +28,7 @@
         @endforeach
     </div>
     <div class="btn col-md-12">
-    <a class="btn btn-success btn-lg" href="#" role="button">　採点する　</a>
+    <a class="btn btn-success btn-lg" href="{{ action('Admin\ResultController@scoring') }}" role="button">　採点する　</a>
     </div>
 </div>
  
