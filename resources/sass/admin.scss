@@ -57,31 +57,36 @@
  }
  
  /* 問題一覧ページ index.blade.php*/
- .box {
+ .card {
   background-color: #ECF4D9;
   box-shadow: 0 3px 6px rgba(0,0,0,0.4);
   padding: 15px;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
  }
  
- .box h3 {
-  margin-bottom: 20px;
- }
- 
- .box h4 {
+ .card h4 {
   font-weight: bold;
  }
  
- .box i {
+ .card i {
   color: green;
  }
  
- .box a {
+ .card a {
   color: #333333;
  }
  
+ .outer_card {
+  margin-bottom: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
+ }
  
+ .card-deck {
+  margin-top: 20px;
+ }
  
  /* 問題ページ*/
  .text {

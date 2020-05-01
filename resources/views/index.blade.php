@@ -10,26 +10,19 @@
 <body class="body">
 <div class="container">
  <p><i class="far fa-grin"></i> こんにちは、{{ Auth::user()->name }}さん</p>
- <div class="outer_box col-md-12">
     <h3>問題一覧</h3>
-    <div class="row inner_box col-md-12">
+    <div class="card-deck">
     @foreach($categories as $category)
-        <div class="box col-md-4">
+        <div class="outer_card col-md-4">
+        <div class="card">
         <h4><i class="fas fa-crow"></i> {{ $category->name }}</h4>
         @foreach($category->units as $unit)
         <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a></p>
         @endforeach
         </div>
-    @endforeach
-        <div class="box col-md-4">
-        <h4><i class="fas fa-random"></i> シャッフル問題</h4>
-        <p><a href="#">問題タイトル</a></p>
-        <p><a href="#">問題タイトル</a></p>
-        <p><a href="#">問題タイトル</a></p>
-        <p><a href="#">問題タイトル</a></p>
         </div>
+    @endforeach
     </div>
- </div>
 </div>
 </body>
 @endsection
