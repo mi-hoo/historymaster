@@ -15,7 +15,7 @@
     @foreach($categories as $category)
         <div class="outer_card col-md-4">
         <div class="card">
-        <h4><i class="fas fa-crow"></i> {{ $category->name }}</h4>
+        <h4><i class="{{ $category->icon }}"></i> {{ $category->name }}</h4>
         @foreach($category->units as $unit)
         <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a></p>
         @endforeach
