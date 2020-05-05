@@ -23,7 +23,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/index/question', 'Admin\QuestionController@question')->middleware('auth');
     Route::get('/index','Admin\QuestionController@title')->middleware('auth');
     Route::get('/index/question','Admin\QuestionController@open')->middleware('auth');
-    Route::get('/index/question/result','Admin\ResultController@scoring')->middleware('auth');
+    Route::post('/index/question/result','Admin\ResultController@scoring')->middleware('auth');
     
 
 });

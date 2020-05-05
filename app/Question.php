@@ -15,4 +15,9 @@ class Question extends Model
     {
         return $this->hasMany(Choice::class);
     }
+    
+    public function incorrects()
+    {
+        return $this->hasMany(Incorrect::class);
+    }
 }

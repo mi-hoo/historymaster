@@ -19,6 +19,8 @@
             <div class="form-check">
             @foreach($question->choices as $choice)
                 <div class="choice">
+                <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
+                    @csrf
                 <input class="form-check-input" type="radio" name="choice" value="{{ $choice->id }}" id="{{ $question->id }}">
                 <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
                 </div>
@@ -28,8 +30,9 @@
         @endforeach
     </div>
     <div class="btn col-md-12">
-    <a class="btn btn-success btn-lg" href="{{ action('Admin\ResultController@scoring') }}" role="button">　採点する　</a>
+    <input type="submit" class="btn btn-success btn-lg" value="　採点する　">
     </div>
+    </form>
 </div>
  
 
