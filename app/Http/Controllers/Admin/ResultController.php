@@ -14,16 +14,15 @@ class ResultController extends Controller
 {
     public function scoring(Request $request) 
     {
-        $result = $request->all();
-        $choices = Choice::find($result->choice_id);
-        $questions = Question::find($result->question_id);
+        $value = $request->input('value');
+        $choices = Choice::find($value);
         
         $incorrect = new Incorrect;
-        if($choice->is_answer == 0) {
-            $incorrect->fill($choice->question_id);
+        if($choices->is_answer == 0) {
+            $incorrect->fill($choices->question_id);
             $incorrect->save();
         }
         
-        return view('result',['questions' => $questions,'choices' => $choices]);
+        return view('result',['choices' => $choices]);
     }
 }

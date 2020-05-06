@@ -21,7 +21,7 @@
                 <div class="choice">
                 <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
                     @csrf
-                <input class="form-check-input" type="radio" name="choice" value="{{ $choice->id }}" id="{{ $question->id }}">
+                <input class="form-check-input" type="radio" name="{{ $question->id }}" value="{{ $choice->id }}" id="{{ $question->id }}">
                 <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
                 </div>
             @endforeach
