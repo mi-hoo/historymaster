@@ -17,10 +17,10 @@
         <div class="text">
         <p>問{{ $question->id }}　{{ $question->text }}</p>
             <div class="form-check">
+            <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
+                @csrf
             @foreach($question->choices as $choice)
                 <div class="choice">
-                <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
-                    @csrf
                 <input class="form-check-input" type="radio" name="{{ $question->id }}" value="{{ $choice->id }}" id="{{ $question->id }}">
                 <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
                 </div>
