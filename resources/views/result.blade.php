@@ -17,9 +17,8 @@
     <div class="outer_box">
     <p>問{{ $question->id }}</p>
     <div class="result">
-        $numbers = range(1, 10);
-        @foreach($numbers as $number)
-        {{ $answer.$number->is_answer == 1 ? '<i class="far fa-circle"></i>' : '<i class="fas fa-times"></i>' }}
+        @foreach($choices as $choice)
+        {{ $choice->is_answer == 1 ? '<i class="far fa-circle"></i>' : '<i class="fas fa-times"></i>' }}
         @endforeach
     </div>        
     @endforeach
