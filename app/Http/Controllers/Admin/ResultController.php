@@ -9,26 +9,36 @@ use App\Unit;
 use App\Question;
 use App\Choice;
 use App\Incorrect;
+use Auth;
 
 class ResultController extends Controller
 {
     public function scoring(Request $request) 
     {
+      //  $this->validate($request, Choice::$rules); //
+        
         $form = $request->all();
         
+    
         unset($form['_token']);
         
-        $incorrect = new Incorrect;
+        
         $choices = Choice::whereIn('id',$form)->get();
         
-        dd($choices);
         
+        foreach($choices as $choice) {
+        $record = Incorrect::where('question_id',$choice->question_id)->where('user_id',Auth::id())->first();
+        if($record != null)
+        $record->delete();
         
-        if($choices->is_answer == 0) {
-            $incorrect->fill($choices->question_id);
+        if($choice->is_answer == 0) {
+            $incorrect = new Incorrect;
+            $incorrect->question_id = $choice->question_id;
+            $incorrect->user_id = Auth::id();
             $incorrect->save();
         }
-        
-        return view('result',['choices' => $choices]);
+        }
+        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit]);
     }
 }
+

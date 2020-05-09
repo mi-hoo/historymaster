@@ -13,13 +13,19 @@
     <h4>{{ $unit->title }}</h4>
  </div>
  <div class="col-md-12">
-    @foreach($questions as $question)
+    @foreach($choices as $choice)
     <div class="outer_box">
-    <p>問{{ $question->id }}</p>
+    <p>問{{ $choice->question_id }}</p>
     <div class="result">
-        @foreach($choices as $choice)
-        {{ $choice->is_answer == 1 ? '<i class="far fa-circle"></i>' : '<i class="fas fa-times"></i>' }}
-        @endforeach
+       
+     
+      @if( $choice->is_answer == 1) 
+      <i class="far fa-circle"></i>
+      @else
+      <i class="fas fa-times"></i>
+      @endif
+      
+        
     </div>        
     @endforeach
     </div>

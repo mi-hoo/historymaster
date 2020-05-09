@@ -111,3 +111,8 @@
   margin-bottom: 20px;
 }
 
+.error p {
+  color: red;
+  text-align: center;
+}
+

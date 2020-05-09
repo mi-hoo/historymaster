@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Choice extends Model
 {
-    public function questions()
+    public function question()
     {
         return $this->belongsTo(Question::class);
     }
+    
+   /* public static $rules = array(
+        '$question->id' => 'required',
+    ); */
 }

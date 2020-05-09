@@ -12,6 +12,11 @@
     <div class="unit_title col-md-12">
     <h4>{{ $unit->title }}</h4>
     </div>
+        <div class="error">
+        @if (count($erros) > 0)
+         <p>解答が選択されていない問題があります。</br>すべての解答を選択してから「採点する」ボタンを押してください。</p>                 
+        @endif
+        </div>
     <div class="question col-md-12">
         @foreach($questions as $question)
         <div class="text">
