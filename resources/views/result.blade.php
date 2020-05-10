@@ -15,20 +15,20 @@
  <div class="col-md-12">
     @foreach($choices as $choice)
     <div class="outer_box">
-    <p>問{{ $choice->question_id }}</p>
-    <div class="result">
-       
-     
-      @if( $choice->is_answer == 1) 
-      <i class="far fa-circle"></i>
-      @else
-      <i class="fas fa-times"></i>
-      @endif
-      
-        
-    </div>        
-    @endforeach
+        <p>問{{ $choice->question_id }}
+        @if( $choice->is_answer == 1) 
+        <i class="far fa-circle"></i>
+        @else
+        <i class="fas fa-times"></i>
+        @endif
+        </p>
+        @foreach($questions as $question)
+        <div class="commentary">
+        <p>{{ $question->commentary }}</p>
+        </div>
+        @endforeach
     </div>
+    @endforeach
  </div>
 </div>
 </body>

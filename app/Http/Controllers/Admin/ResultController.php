@@ -18,13 +18,12 @@ class ResultController extends Controller
       //  $this->validate($request, Choice::$rules); //
         
         $form = $request->all();
-        
     
         unset($form['_token']);
         
         
         $choices = Choice::whereIn('id',$form)->get();
-        
+        $questions = Question::all();
         
         foreach($choices as $choice) {
         $record = Incorrect::where('question_id',$choice->question_id)->where('user_id',Auth::id())->first();
@@ -38,7 +37,7 @@ class ResultController extends Controller
             $incorrect->save();
         }
         }
-        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit]);
+        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit , 'questions' => $questions]);
     }
 }
 

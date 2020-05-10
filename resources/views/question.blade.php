@@ -12,11 +12,11 @@
     <div class="unit_title col-md-12">
     <h4>{{ $unit->title }}</h4>
     </div>
-        <div class="error">
-        @if (count($erros) > 0)
-         <p>解答が選択されていない問題があります。</br>すべての解答を選択してから「採点する」ボタンを押してください。</p>                 
+      {{--  <div class="error">
+        @if (count($errors) > 0)
+         <p>解答が選択されていない問題があります。</br>すべての解答を選択してから「採点する」ボタンを押してください。</p>
         @endif
-        </div>
+        </div> --}}
     <div class="question col-md-12">
         @foreach($questions as $question)
         <div class="text">
@@ -26,7 +26,7 @@
                 @csrf
             @foreach($question->choices as $choice)
                 <div class="choice">
-                <input class="form-check-input" type="radio" name="{{ $question->id }}" value="{{ $choice->id }}" id="{{ $question->id }}">
+                <input class="form-check-input" type="radio" name="{{ $question->id }}" value="{{ old($question->id , $choice->id) }}" id="{{ $question->id }}">
                 <label class="form-check-label" for="{{ $question->id }}">{{ $choice->content }}</label>
                 </div>
             @endforeach
@@ -39,8 +39,6 @@
     </div>
     </form>
 </div>
- 
-
 </div>
 </body>
 @endsection

@@ -11,7 +11,7 @@ class Choice extends Model
         return $this->belongsTo(Question::class);
     }
     
-   /* public static $rules = array(
-        '$question->id' => 'required',
-    ); */
+/*    public static $rules = array(
+        'choice->question_id' => 'required',
+    );  */
 }
