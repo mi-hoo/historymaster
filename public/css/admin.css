@@ -28,7 +28,7 @@
 /* welcomeページ*/
 
 .jumbotron {
-  background-image: url(/images/top_image.jpg?b9101ea0d25f8eaf790fe4fa37aa7095);
+  background-image: url(/images/top_image.jpg?3f18498d7f519a8b279b2148716a4183);
   background-size: cover;
   background-position: center 60%;
   border-radius: 0;
@@ -123,5 +123,9 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   padding: 15px;
   margin-bottom: 20px;
+}
+
+.outer_box i {
+  color: red;
 }
 

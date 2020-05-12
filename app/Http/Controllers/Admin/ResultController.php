@@ -10,20 +10,22 @@ use App\Question;
 use App\Choice;
 use App\Incorrect;
 use Auth;
+use Redirect;
 
 class ResultController extends Controller
 {
     public function scoring(Request $request) 
     {
-      //  $this->validate($request, Choice::$rules); //
         
-        $form = $request->all();
-    
-        unset($form['_token']);
+       $form = $request->all();
+       unset($form['_token']);
+       if (count($form) < 10)
+        return Redirect::back()
+                  ->withInput()
+                  ->withErrors(array('question_id' => 'error'));
         
         
         $choices = Choice::whereIn('id',$form)->get();
-        $questions = Question::all();
         
         foreach($choices as $choice) {
         $record = Incorrect::where('question_id',$choice->question_id)->where('user_id',Auth::id())->first();
@@ -36,8 +38,9 @@ class ResultController extends Controller
             $incorrect->user_id = Auth::id();
             $incorrect->save();
         }
+        
         }
-        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit , 'questions' => $questions]);
+        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit]);
     }
 }
 

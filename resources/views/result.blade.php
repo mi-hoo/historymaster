@@ -17,16 +17,16 @@
     <div class="outer_box">
         <p>問{{ $choice->question_id }}
         @if( $choice->is_answer == 1) 
-        <i class="far fa-circle"></i>
+        <i class="far fa-circle fa-lg"></i>
         @else
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times fa-lg"></i>
         @endif
         </p>
-        @foreach($questions as $question)
+     {{--   @foreach($questions as $question)
         <div class="commentary">
         <p>{{ $question->commentary }}</p>
         </div>
-        @endforeach
+        @endforeach --}}
     </div>
     @endforeach
  </div>
