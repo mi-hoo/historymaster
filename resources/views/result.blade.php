@@ -31,6 +31,9 @@
     @endforeach
  </div>
 </div>
+{{--<div class="backhome">
+    <h5><a href="{{ action('Admin\ResultController@back') }}">問題一覧に戻る</a></h5>
+</div>--}}
 </body>
 @endsection
 </html>

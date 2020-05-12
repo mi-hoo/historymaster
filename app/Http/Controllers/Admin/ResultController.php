@@ -34,6 +34,7 @@ class ResultController extends Controller
         
         if($choice->is_answer == 0) {
             $incorrect = new Incorrect;
+            $incorrect->unit_id = $choice->unit_id;
             $incorrect->question_id = $choice->question_id;
             $incorrect->user_id = Auth::id();
             $incorrect->save();
@@ -41,6 +42,18 @@ class ResultController extends Controller
         
         }
         return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit]);
+    }
+    
+ /* public function back()
+    {
+        return view('index');
+    }  */
+    
+    public function alert() 
+    {
+        if(count($incorrect) > 0) {
+        return view('index' ,['incorrect' => $incorrect]);
+        }
     }
 }
 

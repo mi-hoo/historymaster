@@ -16,6 +16,7 @@ class CreateIncorrectsTable extends Migration
         Schema::create('incorrects', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
+            $table->integer('unit_id');
             $table->integer('question_id');
             $table->timestamps();
         });

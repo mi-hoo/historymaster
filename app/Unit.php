@@ -15,4 +15,14 @@ class Unit extends Model
     {
         return $this->hasMany(Question::class);
     }
+    
+    public function incorrects()
+    {
+        return $this->hasMany(Incorrect::class);
+    }
+    
+    public function choices()
+    {
+        return $this->hasMany(Choice::class);
+    }
 }
