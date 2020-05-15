@@ -24,7 +24,7 @@ class ResultController extends Controller
                   ->withInput()
                   ->withErrors(array('question_id' => 'error'));
         
-        
+        $questions = Question::all();
         $choices = Choice::whereIn('id',$form)->get();
         
         foreach($choices as $choice) {
@@ -41,7 +41,7 @@ class ResultController extends Controller
         }
         
         }
-        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit]);
+        return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit , 'questions' => $questions]);
     }
     
  /* public function back()
@@ -49,11 +49,6 @@ class ResultController extends Controller
         return view('index');
     }  */
     
-    public function alert() 
-    {
-        if(count($incorrect) > 0) {
-        return view('index' ,['incorrect' => $incorrect]);
-        }
-    }
+    
 }
 

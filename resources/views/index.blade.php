@@ -16,9 +16,12 @@
         <div class="outer_card col-md-4">
         <div class="card">
         <h4><i class="{{ $category->icon }}"></i> {{ $category->name }}</h4>
-        @foreach($category->units as $unit)
-        <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a></p>@if($incorrect->unit_id == $unit->id)<p><i class="fas fa-exclamation-circle"></i></p>@endif
-        @endforeach
+            @foreach($category->units as $unit)
+                <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a></p>
+                @if(count($unit->incorrects)>0)
+                    <i class="fas fa-exclamation-circle"></i>
+                @endif
+            @endforeach
         </div>
         </div>
     @endforeach

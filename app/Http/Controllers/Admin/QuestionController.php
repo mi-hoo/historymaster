@@ -8,12 +8,13 @@ use App\Category;
 use App\Unit;
 use App\Question;
 use App\Choice;
+use App\Incorrect;
 
 class QuestionController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return view('index', ['incorrect' => $incorrect]);
     }
     
     public function question()
@@ -23,10 +24,8 @@ class QuestionController extends Controller
    
     public function title()
     {
-        $unit = Unit::all();
         $categories = Category::all();
-
-        return view('index',['unit' => $unit,'categories' => $categories]);
+        return view('index',['categories' => $categories]);
         
     }
     
