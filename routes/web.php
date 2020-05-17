@@ -24,7 +24,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/index','Admin\QuestionController@title')->middleware('auth');
     Route::get('/index/question','Admin\QuestionController@open')->middleware('auth');
     Route::post('/index/question/result','Admin\ResultController@scoring')->middleware('auth');
-  //  Route::get('/index', 'Admin\ResultController@back')->middleware('auth'); //s
+  
     
 
 });

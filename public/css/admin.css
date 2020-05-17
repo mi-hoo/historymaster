@@ -103,6 +103,10 @@
   margin-bottom: 20px;
 }
 
+.text i {
+  color: green;
+}
+
 .unit_title {
   margin-bottom: 20px;
 }

@@ -20,7 +20,10 @@
     <div class="question col-md-12">
         @foreach($questions as $question)
         <div class="text">
-        <p>問{{ $question->id }}　{{ $question->text }}</p>
+        <p>@if(count($question->incorrects)>0)
+                <i class="fas fa-exclamation-circle"></i>
+            @endif
+            問{{ $question->id }}　{{ $question->text }}</p>
             <div class="form-check">
             <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
                 @csrf
