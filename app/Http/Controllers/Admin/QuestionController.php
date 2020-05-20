@@ -14,9 +14,10 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        return view('index', ['incorrect' => $incorrect]);
+        $incorrects = Incorrect::all();
+        return view('index',['incorrects' => $incorrects]);
     }
-    
+   
     public function question()
     {
         return view('question');
@@ -26,7 +27,6 @@ class QuestionController extends Controller
     {
         $categories = Category::all();
         return view('index',['categories' => $categories]);
-        
     }
     
     public function open(Request $request)

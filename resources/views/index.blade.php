@@ -10,7 +10,9 @@
 <body class="body">
 <div class="container">
  <p>こんにちは、{{ Auth::user()->name }}さん</p>
- {{--<p>{{ $incorrect > 0 ? "前回間違えた問題があります。もう一度解き直してみましょう。" : "" }}</p>--}}
+ {{--@if(count($incorrects)>0)
+    <p><i class="fas fa-exclamation-circle"></i>前回間違えた問題があります。もう一度解き直してみましょう。</p>
+ @endif--}}
     <h3>問題一覧</h3>
     <div class="card-deck">
     @foreach($categories as $category)
