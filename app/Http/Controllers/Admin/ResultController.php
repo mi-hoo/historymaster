@@ -44,7 +44,7 @@ class ResultController extends Controller
         return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit , 'questions' => $questions]);
     }
     
-
+    
     
 }
 

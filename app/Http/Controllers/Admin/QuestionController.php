@@ -14,10 +14,11 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $incorrects = Incorrect::all();
-        return view('index',['incorrects' => $incorrects]);
+        $incorrect = Incorrect::all;
+        dd($incorrect);
+        return view('index',['incorrect' => $incorrect]);
     }
-   
+    
     public function question()
     {
         return view('question');
@@ -32,8 +33,8 @@ class QuestionController extends Controller
     public function open(Request $request)
     {
         $unit = Unit::find($request->id);
-        $questions = Question::all();
-        $choices = Choice::all();
+        $questions = Question::where('unit_id',$request->id)->get();
+        $choices = Choice::where('unit_id',$request->id)->get();
         return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices]);
     }
 }
