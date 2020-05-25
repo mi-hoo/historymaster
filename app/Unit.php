@@ -28,7 +28,6 @@ class Unit extends Model
     
     public function users()
     {
-        return $this->belongsToMany(User::class)
-        ->using('App\Incorrect');
+        return $this->belongsToMany('App\User')->using('App\Incorrect');
     }
 }

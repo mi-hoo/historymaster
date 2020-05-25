@@ -39,7 +39,6 @@ class User extends Authenticatable
     
     public function units()
     {
-        return $this->belongsToMany(Unit::class)
-        ->using('App\Incorrect');
+        return $this->belongsToMany('App\Unit')->using('App\Incorrect');
     }
 }

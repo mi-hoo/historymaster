@@ -35,10 +35,9 @@ class QuestionController extends Controller
     public function open(Request $request)
     {
         $unit = Unit::find($request->id);
-        $user = User::with('incorrects')->get();
+        $user = Auth::user();
         $questions = Question::where('unit_id',$request->id)->get();
         $choices = Choice::where('unit_id',$request->id)->get();
-        return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices]);
-        
+        return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices,'user' => $user]);
     }
 }
