@@ -9,14 +9,16 @@ use App\Unit;
 use App\Question;
 use App\Choice;
 use App\Incorrect;
+use Auth;
 
 class QuestionController extends Controller
 {
     public function index()
     {
-        $incorrect = Incorrect::all;
-        dd($incorrect);
-        return view('index',['incorrect' => $incorrect]);
+        $incorrects = Incorrect::all();
+        if($incorrects != null)
+        $incorrects->delete();
+        return view('index',['incorrects' => $incorrects]);
     }
     
     public function question()
@@ -33,8 +35,10 @@ class QuestionController extends Controller
     public function open(Request $request)
     {
         $unit = Unit::find($request->id);
+        $user = User::with('incorrects')->get();
         $questions = Question::where('unit_id',$request->id)->get();
         $choices = Choice::where('unit_id',$request->id)->get();
         return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices]);
+        
     }
 }

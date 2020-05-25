@@ -25,4 +25,10 @@ class Unit extends Model
     {
         return $this->hasMany(Choice::class);
     }
+    
+    public function users()
+    {
+        return $this->belongsToMany(User::class)
+        ->using('App\Incorrect');
+    }
 }

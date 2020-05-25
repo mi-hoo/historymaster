@@ -19,6 +19,7 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function() {
+    Route::get('/index', 'Admin\ResultController@alert')->middleware('auth');
     Route::get('/index', 'Admin\QuestionController@index')->middleware('auth');
     Route::get('/index/question', 'Admin\QuestionController@question')->middleware('auth');
     Route::get('/index','Admin\QuestionController@title')->middleware('auth');

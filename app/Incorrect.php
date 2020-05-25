@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Incorrect extends Model
+class Incorrect extends Pivot
 {
    public function questions()
     {
@@ -14,5 +14,10 @@ class Incorrect extends Model
     public function unit()
     {
         return $this->belongsTo(Unit::class);
+    }
+    
+    public function user()
+    {
+        return $this->hasMany(User::class);
     }
 }
