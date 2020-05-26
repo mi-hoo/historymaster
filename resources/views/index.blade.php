@@ -10,9 +10,9 @@
 <body class="body">
 <div class="container">
  <p>こんにちは、{{ Auth::user()->name }}さん</p>
- {{--@if($user->incorrects != null)
+ @if(Auth::user()->incorrects != null)
     <p><i class="fas fa-exclamation-circle"></i>前回間違えた問題があります。もう一度解き直してみましょう。</p>
- @endif--}}
+ @endif
     <h3>問題一覧</h3>
     <div class="card-deck">
     @foreach($categories as $category)
@@ -21,9 +21,9 @@
         <h4><i class="{{ $category->icon }}"></i> {{ $category->name }}</h4>
             @foreach($category->units as $unit)
                 <p><a href="{{ action('Admin\QuestionController@open', ['id' => $unit->id]) }}">{{ $unit->title }}</a>
-                {{--@if(count($user->incorrects)>0)
+                @if($unit->users->contains(Auth::user()))
                     <i class="fas fa-exclamation-circle"></i>
-                @endif--}}
+                @endif
             @endforeach
                 </p>
         </div>

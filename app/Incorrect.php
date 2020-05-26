@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Incorrect extends Model
+class Incorrect extends Pivot
 {
     protected $table = 'incorrects';
     

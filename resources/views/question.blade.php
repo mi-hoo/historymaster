@@ -44,7 +44,7 @@
 </div>
 </div>
 <div class="backhome">
-    <h5><a href="#">問題一覧に戻る</a></h5>
+    <h5><a href="/">問題一覧に戻る</a></h5>
 </div>
 </body>
 @endsection
