@@ -44,6 +44,12 @@ class ResultController extends Controller
         return view('result',['choices' => $choices , 'unit' => $choices[0]->question->unit , 'questions' => $questions]);
     }
     
+    public function number()
+    {
+        for($number = 1; $number <= 10; $number++);
+        return view('question',['number' => $number]);
+    }
+    
     
     
 }

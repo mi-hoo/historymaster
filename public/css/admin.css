@@ -47,7 +47,9 @@
 
 .feature {
   background-color: #ECF4D9;
-  padding: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
   margin-bottom: 30px;
 }
 
@@ -62,6 +64,14 @@
 }
 
 /* 問題一覧ページ index.blade.php*/
+
+h3 {
+  margin-top: 30px;
+}
+
+.container i {
+  color: green;
+}
 
 .card {
   background-color: #ECF4D9;

@@ -23,7 +23,7 @@
         <p>@if(count($question->incorrects)>0)
                 <i class="fas fa-exclamation-circle"></i>
             @endif
-            問{{ $question->id }}　{{ $question->text }}</p>
+            問{{ $question->id }}&emsp;{{ $question->text }}</p>
             <div class="form-check">
             <form action="{{ action('Admin\ResultController@scoring') }}" method="post">
                 @csrf

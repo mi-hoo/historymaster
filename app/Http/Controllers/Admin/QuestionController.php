@@ -39,4 +39,5 @@ class QuestionController extends Controller
         $choices = Choice::where('unit_id',$request->id)->get();
         return view('question',['unit' => $unit,'questions' => $questions,'choices' => $choices]);
     }
+    
 }

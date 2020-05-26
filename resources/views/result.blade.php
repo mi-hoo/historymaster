@@ -19,18 +19,18 @@
                 @if( $choice->is_answer == 1) 
                     <i class="far fa-circle fa-lg"></i>
                 @else
-                    <i class="fas fa-times fa-lg"></i>
+                    <i class="fas fa-times fa-lg"></i><p>正解：{{ $choice->content }}</p>
                 @endif
             </p>
                 <div class="commentary">
-                    <p>{{ $choice->question->commentary }}</p>
+                    <p>解説：{{ $choice->question->commentary }}</p>
                 </div>
         </div>
     @endforeach
  </div>
 </div>
 <div class="backhome">
-    <h5><a href="#">問題一覧に戻る</a></h5>
+    <h5><a href="/">問題一覧に戻る</a></h5>
 </div>
 </body>
 @endsection

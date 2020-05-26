@@ -13,12 +13,12 @@ class Incorrect extends Pivot
         return $this->belongsTo(Question::class);
     }
     
-    public function unit()
+    public function units()
     {
         return $this->belongsTo(Unit::class);
     }
     
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class);
     }
