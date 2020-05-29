@@ -30,7 +30,7 @@
 .jumbotron {
   background-image: url(/images/top_image.jpg?3f18498d7f519a8b279b2148716a4183);
   background-size: cover;
-  background-position: center 60%;
+  background-position: top;
   border-radius: 0;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .float-left {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   padding: 30px;
   margin-top: 40px;
 }

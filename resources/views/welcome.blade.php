@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 @extends('layouts.admin')
 @section('content')
-    <div class="jumbotron">
-     <div class="clearfix">
+    <div class="jumbotron jumbotron-fluid">
+     <div class="container clearfix">
       <div class="float-left">
        <h1>無料で学べる</h1>
         <h1>中学歴史Web学習サイト</h1>
