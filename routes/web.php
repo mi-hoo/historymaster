@@ -24,8 +24,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/index','Admin\QuestionController@title')->middleware('auth');
     Route::get('/index/question','Admin\QuestionController@open')->middleware('auth');
     Route::post('/index/question/result','Admin\ResultController@scoring')->middleware('auth');
-  
-    
-
 });
 
+//お問い合わせページ
+Route::get('/contact', 'HomeController@input')->name('contact.input');
+Route::post('/contact/confirm', 'HomeController@confirm')->name('contact.confirm');
+Route::post('/contact/thanks', 'HomeController@send')->name('contact.send');
