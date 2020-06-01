@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">使い方</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">お問い合わせ</a>
+                    <a class="nav-link" href="{{ route('contact.input') }}">お問い合わせ</a>
                 </li>
             </ul>
             <div class="my-navbar-control">

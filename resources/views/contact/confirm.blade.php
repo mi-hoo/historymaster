@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 @extends('layouts.admin')
-
 @section('content')
+<body class="body">
+    <div class="container">
 <form method="POST" action="{{ route('contact.send') }}">
     @csrf
 
@@ -40,5 +41,7 @@
         送信する
     </button>
 </form>
+</div>
+</body>
 @endsection
 </html>
