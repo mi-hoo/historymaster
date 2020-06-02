@@ -9,8 +9,10 @@
 @section('content')
 <body class="body">
     <div class="container">
-<h3>{{ __('送信が完了しました。') }}</h3>
-</div>
+        <div class="thanks col-md-12 mx-auto text-center">
+            <h5>{{ __('送信が完了しました。') }}</h5>
+        </div>
+    </div>
 </body>
 @endsection
 </html>

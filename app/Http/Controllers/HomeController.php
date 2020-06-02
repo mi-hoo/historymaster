@@ -74,7 +74,7 @@ class HomeController extends Controller
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
-                ->route('contact.index')
+                ->route('contact.input')
                 ->withInput($inputs);
 
         } else {

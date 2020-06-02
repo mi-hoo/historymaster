@@ -56,7 +56,7 @@
             
         </div>
      {{-- フッター--}}   
-    <footer class="container-fluid">
+    <footer class="fixed-bottom container-fluid">
      
       <p class="text-center">Copyright (C) 2020 hogehoge55 All Rights Reserved.</p>
   　 
